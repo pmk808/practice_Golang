@@ -1,4 +1,4 @@
-package main
+package prac1
 
 import (
 	"fmt"
@@ -24,7 +24,7 @@ func isPrime(n int) bool {
 	return true
 }
 
-func main() {
+func Run() {
 	var num int
 	fmt.Print("Enter a number: ")
 	fmt.Scan(&num)
