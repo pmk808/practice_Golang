@@ -6,6 +6,8 @@ import (
 
 	"practice/prac1"
 	"practice/prac2"
+	"practice/prac3"
+	"practice/prac4"
 )
 
 func main() {
@@ -19,6 +21,10 @@ func main() {
 		prac1.Run()
 	case "2":
 		prac2.Run()
+	case "3":
+		prac3.Run()
+	case "4":
+		prac4.Run()
 	default:
 		fmt.Println("Invalid practice number. Please choose 1, 2, or 3")
 	}
