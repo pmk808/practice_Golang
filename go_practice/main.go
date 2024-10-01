@@ -9,6 +9,7 @@ import (
 	"practice/prac3"
 	"practice/prac4"
 	"practice/prac5"
+	"practice/prac6"
 	"practice/practice_quiz"
 )
 
@@ -29,6 +30,8 @@ func main() {
 		prac4.Run()
 	case "5":
 		prac5.Run()
+	case "6":
+		prac6.Run()
 	case "practice":
 		practice_quiz.Run()
 	default:
