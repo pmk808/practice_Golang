@@ -11,139 +11,116 @@ func Run() {
 		options  []string
 		answer   string
 	}{
-		// Basic Syntax and Concepts
+		// Principles of Microservices
 		{
-			"What is the zero value of an int in Go?",
-			[]string{"a) 0", "b) -1", "c) 1", "d) Undefined"},
+			"What is the principle of Single Responsibility in microservices?",
+			[]string{"a) Each service should do one thing well", "b) Services should be tightly coupled", "c) All services should share a database", "d) Services should be monolithic"},
 			"a",
 		},
 		{
-			"Which control structure is used to execute code based on a condition?",
-			[]string{"a) for", "b) if", "c) switch", "d) both b and c"},
-			"d",
-		},
-		{
-			"What keyword is used to define a function in Go?",
-			[]string{"a) func", "b) define", "c) function", "d) method"},
-			"a",
-		},
-		{
-			"What is the purpose of the 'import' statement?",
-			[]string{"a) To include packages", "b) To define variables", "c) To create functions", "d) To handle errors"},
-			"a",
-		},
-
-		// Go-Specific Features
-		{
-			"What is a goroutine?",
-			[]string{"a) A type of variable", "b) A lightweight thread", "c) A function", "d) A package"},
+			"What does Autonomy mean in the context of microservices?",
+			[]string{"a) Services are dependent on each other", "b) Services can be developed and deployed independently", "c) All services must use the same technology", "d) Services cannot be scaled"},
 			"b",
 		},
 		{
-			"What is the purpose of channels in Go?",
-			[]string{"a) To store data", "b) To communicate between goroutines", "c) To handle errors", "d) To format strings"},
+			"What is meant by Decentralization in microservices?",
+			[]string{"a) Centralized decision-making", "b) Avoiding single points of failure", "c) All data is stored in one place", "d) Services must be identical"},
 			"b",
 		},
 		{
-			"What does the 'defer' keyword do?",
-			[]string{"a) Delays function execution", "b) Stops the program", "c) Creates a new goroutine", "d) Returns a value"},
-			"a",
-		},
-		{
-			"What is the purpose of the 'panic' function?",
-			[]string{"a) To handle errors", "b) To stop the program", "c) To recover from a panic", "d) To log messages"},
-			"b",
-		},
-
-		// Data Structures
-		{
-			"What is the zero value of a slice in Go?",
-			[]string{"a) nil", "b) []", "c) 0", "d) Undefined"},
-			"a",
-		},
-		{
-			"What is a map in Go?",
-			[]string{"a) A collection of key-value pairs", "b) A type of array", "c) A function", "d) A package"},
-			"a",
-		},
-		{
-			"What is the purpose of structs in Go?",
-			[]string{"a) To define functions", "b) To group related data", "c) To handle errors", "d) To create goroutines"},
+			"What does Isolation of Failures refer to in microservices?",
+			[]string{"a) All services fail together", "b) Issues in one service shouldn't affect others", "c) Services must share resources", "d) Services are always online"},
 			"b",
 		},
 		{
-			"What is the difference between an array and a slice?",
-			[]string{"a) Arrays are fixed size, slices are dynamic", "b) Slices are fixed size, arrays are dynamic", "c) They are the same", "d) None of the above"},
-			"a",
-		},
-
-		// Standard Library
-		{
-			"What does the 'fmt' package do?",
-			[]string{"a) Formatting I/O", "b) File handling", "c) Networking", "d) Concurrency"},
-			"a",
-		},
-		{
-			"What is the purpose of the 'os' package?",
-			[]string{"a) To handle HTTP requests", "b) To interact with the operating system", "c) To format output", "d) To manage concurrency"},
+			"What is Continuous Delivery in microservices?",
+			[]string{"a) Deploying all services at once", "b) Frequent, automated deployments of individual services", "c) Manual deployment of services", "d) Only deploying when necessary"},
 			"b",
 		},
 		{
-			"What package is used for creating web servers?",
-			[]string{"a) net/http", "b) fmt", "c) os", "d) time"},
-			"a",
-		},
-		{
-			"What function is used to read a file in Go?",
-			[]string{"a) os.ReadFile", "b) fmt.ReadFile", "c) io.ReadFile", "d) file.Read"},
-			"a",
+			"What does Evolutionary Design mean in microservices?",
+			[]string{"a) Services cannot change", "b) Services can evolve independently", "c) All services must be rewritten", "d) Services are static"},
+			"b",
 		},
 
-		// Testing
+		// Advantages of Microservices
 		{
-			"What is the purpose of unit tests?",
-			[]string{"a) To test individual components", "b) To test the entire application", "c) To format code", "d) To handle errors"},
+			"What is a key advantage of microservices regarding scalability?",
+			[]string{"a) Scale the entire application", "b) Scale individual components based on demand", "c) No scaling is possible", "d) All services must scale together"},
+			"b",
+		},
+		{
+			"What does Technology Diversity allow in microservices?",
+			[]string{"a) Use of a single technology stack", "b) Freedom to use different technologies for different services", "c) All services must use the same programming language", "d) No technology choices"},
+			"b",
+		},
+		{
+			"How does microservices architecture improve development speed?",
+			[]string{"a) Smaller codebases are easier to understand", "b) All code is in one place", "c) Larger teams are required", "d) Slower development due to complexity"},
 			"a",
 		},
 		{
-			"What is a table-driven test?",
-			[]string{"a) A test with multiple cases", "b) A test that uses tables", "c) A test for web applications", "d) A test for databases"},
-			"a",
-		},
-
-		// Tools
-		{
-			"What does 'go fmt' do?",
-			[]string{"a) Formats Go code", "b) Compiles Go code", "c) Runs tests", "d) Creates modules"},
-			"a",
+			"What is improved fault isolation in microservices?",
+			[]string{"a) Failures affect all services", "b) Failures are contained within individual services", "c) All services must be online", "d) Services cannot fail"},
+			"b",
 		},
 		{
-			"What does 'go vet' do?",
-			[]string{"a) Detects suspicious code", "b) Formats code", "c) Compiles code", "d) Runs the application"},
-			"a",
-		},
-
-		// Project Structure
-		{
-			"What is the purpose of Go modules?",
-			[]string{"a) To manage dependencies", "b) To format code", "c) To create tests", "d) To handle errors"},
-			"a",
-		},
-		{
-			"What is a common practice for organizing code in a Go project?",
-			[]string{"a) Grouping by functionality", "b) Grouping by file size", "c) Random organization", "d) Grouping by author"},
-			"a",
+			"What does it mean to innovate easily in microservices?",
+			[]string{"a) All features must be tested together", "b) Experimenting with new features in isolated services", "c) No innovation is possible", "d) All services must be updated simultaneously"},
+			"b",
 		},
 
-		// Best Practices
+		// Challenges of Microservices
 		{
-			"What is a guideline for writing effective Go code?",
-			[]string{"a) Use clear naming conventions", "b) Avoid comments", "c) Write long functions", "d) Use global variables"},
+			"What is a challenge of distributed system complexity in microservices?",
+			[]string{"a) Easy inter-service communication", "b) Managing inter-service communication and data consistency", "c) All services are in one place", "d) No challenges exist"},
+			"b",
+		},
+		{
+			"What does operational overhead refer to in microservices?",
+			[]string{"a) Fewer services to manage", "b) More services mean more components to monitor", "c) All services are automated", "d) No monitoring is needed"},
+			"b",
+		},
+		{
+			"What is a testing complexity challenge in microservices?",
+			[]string{"a) Testing is simpler", "b) Need to test both individual services and their interactions", "c) No testing is required", "d) All tests are manual"},
+			"b",
+		},
+		{
+			"What does deployment complexity mean in microservices?",
+			[]string{"a) Easy to deploy all services", "b) Coordinating updates across multiple services", "c) No deployment is needed", "d) All services are deployed at once"},
+			"b",
+		},
+		{
+			"What is network latency in microservices?",
+			[]string{"a) Fast communication between services", "b) Communication between services adds overhead", "c) No latency exists", "d) All services are local"},
+			"b",
+		},
+
+		// Comparison with Monolithic Architecture
+		{
+			"What is a key difference between monolithic and microservices architecture?",
+			[]string{"a) Monoliths are easier to develop initially", "b) Microservices are easier to maintain as they grow", "c) Both are the same", "d) Monoliths cannot scale"},
 			"a",
 		},
 		{
-			"What is a common idiom in Go for handling errors?",
-			[]string{"a) Ignore errors", "b) Return errors", "c) Log errors", "d) Panic on errors"},
+			"In terms of deployment, how do monolithic and microservices architectures differ?",
+			[]string{"a) Monoliths deploy individual services", "b) Microservices deploy the entire application at once", "c) Monoliths deploy the entire application at once", "d) Microservices cannot be deployed"},
+			"c",
+		},
+		{
+			"What is a scaling difference between monolithic and microservices architectures?",
+			[]string{"a) Monoliths scale individual components", "b) Microservices scale the entire application", "c) Monoliths scale the entire application", "d) Both scale the same way"},
+			"c",
+		},
+		{
+			"What is a technology stack difference between monolithic and microservices architectures?",
+			[]string{"a) Monoliths can use multiple technologies", "b) Microservices can use different technologies for different services", "c) Both use the same technology stack", "d) Monoliths cannot use different technologies"},
+			"b",
+		},
+		{
+			"What is a team structure difference between monolithic and microservices architectures?",
+			[]string{"a) Monoliths require smaller teams", "b) Microservices allow for smaller, specialized teams", "c) Both require large teams", "d) Monoliths cannot have specialized teams"},
 			"b",
 		},
 	}
