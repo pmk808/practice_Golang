@@ -11,117 +11,92 @@ func Run() {
 		options  []string
 		answer   string
 	}{
-		// Principles of Microservices
+		// RESTful API Design and Implementation
 		{
-			"What is the principle of Single Responsibility in microservices?",
-			[]string{"a) Each service should do one thing well", "b) Services should be tightly coupled", "c) All services should share a database", "d) Services should be monolithic"},
-			"a",
-		},
-		{
-			"What does Autonomy mean in the context of microservices?",
-			[]string{"a) Services are dependent on each other", "b) Services can be developed and deployed independently", "c) All services must use the same technology", "d) Services cannot be scaled"},
-			"b",
-		},
-		{
-			"What is meant by Decentralization in microservices?",
-			[]string{"a) Centralized decision-making", "b) Avoiding single points of failure", "c) All data is stored in one place", "d) Services must be identical"},
-			"b",
-		},
-		{
-			"What does Isolation of Failures refer to in microservices?",
-			[]string{"a) All services fail together", "b) Issues in one service shouldn't affect others", "c) Services must share resources", "d) Services are always online"},
-			"b",
-		},
-		{
-			"What is Continuous Delivery in microservices?",
-			[]string{"a) Deploying all services at once", "b) Frequent, automated deployments of individual services", "c) Manual deployment of services", "d) Only deploying when necessary"},
-			"b",
-		},
-		{
-			"What does Evolutionary Design mean in microservices?",
-			[]string{"a) Services cannot change", "b) Services can evolve independently", "c) All services must be rewritten", "d) Services are static"},
-			"b",
-		},
-
-		// Advantages of Microservices
-		{
-			"What is a key advantage of microservices regarding scalability?",
-			[]string{"a) Scale the entire application", "b) Scale individual components based on demand", "c) No scaling is possible", "d) All services must scale together"},
-			"b",
-		},
-		{
-			"What does Technology Diversity allow in microservices?",
-			[]string{"a) Use of a single technology stack", "b) Freedom to use different technologies for different services", "c) All services must use the same programming language", "d) No technology choices"},
-			"b",
-		},
-		{
-			"How does microservices architecture improve development speed?",
-			[]string{"a) Smaller codebases are easier to understand", "b) All code is in one place", "c) Larger teams are required", "d) Slower development due to complexity"},
-			"a",
-		},
-		{
-			"What is improved fault isolation in microservices?",
-			[]string{"a) Failures affect all services", "b) Failures are contained within individual services", "c) All services must be online", "d) Services cannot fail"},
-			"b",
-		},
-		{
-			"What does it mean to innovate easily in microservices?",
-			[]string{"a) All features must be tested together", "b) Experimenting with new features in isolated services", "c) No innovation is possible", "d) All services must be updated simultaneously"},
-			"b",
-		},
-
-		// Challenges of Microservices
-		{
-			"What is a challenge of distributed system complexity in microservices?",
-			[]string{"a) Easy inter-service communication", "b) Managing inter-service communication and data consistency", "c) All services are in one place", "d) No challenges exist"},
-			"b",
-		},
-		{
-			"What does operational overhead refer to in microservices?",
-			[]string{"a) Fewer services to manage", "b) More services mean more components to monitor", "c) All services are automated", "d) No monitoring is needed"},
-			"b",
-		},
-		{
-			"What is a testing complexity challenge in microservices?",
-			[]string{"a) Testing is simpler", "b) Need to test both individual services and their interactions", "c) No testing is required", "d) All tests are manual"},
-			"b",
-		},
-		{
-			"What does deployment complexity mean in microservices?",
-			[]string{"a) Easy to deploy all services", "b) Coordinating updates across multiple services", "c) No deployment is needed", "d) All services are deployed at once"},
-			"b",
-		},
-		{
-			"What is network latency in microservices?",
-			[]string{"a) Fast communication between services", "b) Communication between services adds overhead", "c) No latency exists", "d) All services are local"},
-			"b",
-		},
-
-		// Comparison with Monolithic Architecture
-		{
-			"What is a key difference between monolithic and microservices architecture?",
-			[]string{"a) Monoliths are easier to develop initially", "b) Microservices are easier to maintain as they grow", "c) Both are the same", "d) Monoliths cannot scale"},
-			"a",
-		},
-		{
-			"In terms of deployment, how do monolithic and microservices architectures differ?",
-			[]string{"a) Monoliths deploy individual services", "b) Microservices deploy the entire application at once", "c) Monoliths deploy the entire application at once", "d) Microservices cannot be deployed"},
+			"In the library analogy for RESTful APIs, what do the 'shelves' represent?",
+			[]string{"a) Resources", "b) HTTP methods", "c) Endpoints", "d) Data types"},
 			"c",
 		},
 		{
-			"What is a scaling difference between monolithic and microservices architectures?",
-			[]string{"a) Monoliths scale individual components", "b) Microservices scale the entire application", "c) Monoliths scale the entire application", "d) Both scale the same way"},
+			"Which HTTP method is analogous to 'updating information in a book' in a RESTful API?",
+			[]string{"a) GET", "b) POST", "c) PUT/PATCH", "d) DELETE"},
 			"c",
 		},
 		{
-			"What is a technology stack difference between monolithic and microservices architectures?",
-			[]string{"a) Monoliths can use multiple technologies", "b) Microservices can use different technologies for different services", "c) Both use the same technology stack", "d) Monoliths cannot use different technologies"},
+			"In a Go RESTful API using Gin, what does `router.GET('/books', getBooks)` do?",
+			[]string{"a) Defines a function named getBooks", "b) Creates a new book", "c) Sets up a route to handle GET requests for /books", "d) Deletes all books"},
+			"c",
+		},
+		{
+			"What's the purpose of `c.JSON(200, books)` in a Gin handler function?",
+			[]string{"a) To create a new JSON file", "b) To send a JSON response with status code 200", "c) To parse incoming JSON", "d) To validate JSON data"},
+			"b",
+		},
+
+		// Goroutines and Concurrency
+		{
+			"In the kitchen analogy for goroutines, what represents a goroutine?",
+			[]string{"a) A dish", "b) The kitchen", "c) A chef", "d) A recipe"},
+			"c",
+		},
+		{
+			"What does the `go` keyword do in Go?",
+			[]string{"a) Creates a new variable", "b) Defines a new function", "c) Starts a new goroutine", "d) Imports a package"},
+			"c",
+		},
+		{
+			"Why might we use `time.Sleep()` in a program with goroutines?",
+			[]string{"a) To make the program faster", "b) To allow time for goroutines to complete", "c) To create more goroutines", "d) To stop all goroutines"},
 			"b",
 		},
 		{
-			"What is a team structure difference between monolithic and microservices architectures?",
-			[]string{"a) Monoliths require smaller teams", "b) Microservices allow for smaller, specialized teams", "c) Both require large teams", "d) Monoliths cannot have specialized teams"},
+			"What's a key advantage of using goroutines in a microservice?",
+			[]string{"a) They make the code easier to read", "b) They allow efficient handling of multiple tasks", "c) They automatically fix bugs", "d) They reduce the need for testing"},
 			"b",
+		},
+
+		// Channels for Inter-service Communication
+		{
+			"In the factory analogy, what do channels represent?",
+			[]string{"a) Workers", "b) Products", "c) Conveyor belts", "d) Managers"},
+			"c",
+		},
+		{
+			"What's the primary purpose of channels in Go?",
+			[]string{"a) To store data permanently", "b) To create new goroutines", "c) To allow safe communication between goroutines", "d) To replace functions"},
+			"c",
+		},
+		{
+			"How do you create a new channel in Go?",
+			[]string{"a) new(chan)", "b) make(chan Type)", "c) channel.New()", "d) createChannel()"},
+			"b",
+		},
+		{
+			"What does `for order := range orders` do in a Go program?",
+			[]string{"a) Creates new orders", "b) Deletes all orders", "c) Receives orders from a channel until it's closed", "d) Sends orders to a channel"},
+			"c",
+		},
+
+		// Context Package for Request Scoping and Cancellation
+		{
+			"In the mission control analogy, what does the context represent?",
+			[]string{"a) The entire mission", "b) The control panel with abort button", "c) The mission commander", "d) The spaceship"},
+			"b",
+		},
+		{
+			"What's a primary use of the context package in Go microservices?",
+			[]string{"a) To create new services", "b) To store permanent data", "c) To manage request lifecycles and cancellation", "d) To replace databases"},
+			"c",
+		},
+		{
+			"What does `ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)` do?",
+			[]string{"a) Cancels the context immediately", "b) Creates a context that will timeout after 5 seconds", "c) Pauses the program for 5 seconds", "d) Creates 5 new goroutines"},
+			"b",
+		},
+		{
+			"What happens when a context is canceled in a Go program?",
+			[]string{"a) The entire program crashes", "b) All goroutines stop immediately", "c) The database is wiped", "d) Functions can check for cancellation and stop gracefully"},
+			"d",
 		},
 	}
 
