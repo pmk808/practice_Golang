@@ -11,72 +11,72 @@ func Run() {
 		options  []string
 		answer   string
 	}{
-		// Gin for HTTP Routing
+		// Database Integration
 		{
-			"In the traffic controller analogy for Gin, what do the 'roads' represent?",
-			[]string{"a) Databases", "b) Servers", "c) Endpoints", "d) Middleware"},
+			"In the library analogy for database integration, what does the 'librarian' represent?",
+			[]string{"a) The database", "b) The user", "c) The microservice", "d) The data"},
 			"c",
 		},
 		{
-			"Which of the following is a key feature of Gin?",
-			[]string{"a) Built-in database", "b) Automatic code generation", "c) Middleware support", "d) Machine learning capabilities"},
-			"c",
-		},
-		{
-			"In a Gin router, what does `r.GET('/hello', handleHello)` do?",
-			[]string{"a) Sends a GET request", "b) Creates a new endpoint", "c) Sets up a route to handle GET requests for /hello", "d) Defines a function named handleHello"},
-			"c",
-		},
-
-		// gRPC for Inter-service Communication
-		{
-			"In the postal service analogy for gRPC, what do 'postcards with predefined fields' represent?",
-			[]string{"a) JSON", "b) XML", "c) Protocol Buffers", "d) HTML"},
-			"c",
-		},
-		{
-			"What is a key advantage of using gRPC in microservices?",
-			[]string{"a) It's easier to learn than REST", "b) It uses human-readable formats", "c) It's more efficient for data serialization", "d) It doesn't require any configuration"},
-			"c",
-		},
-		{
-			"In a .proto file for gRPC, what does `rpc SayHello (HelloRequest) returns (HelloReply) {}` define?",
-			[]string{"a) A new data type", "b) A service method", "c) A variable", "d) A package"},
-			"b",
-		},
-
-		// Docker for Containerization
-		{
-			"In the shipping analogy for Docker, what does a container represent?",
-			[]string{"a) A server", "b) An application with its environment", "c) A programming language", "d) A database"},
+			"Which package in Go provides a consistent interface for SQL databases?",
+			[]string{"a) sql.DB", "b) database/sql", "c) sqlx", "d) gorm"},
 			"b",
 		},
 		{
-			"What is a key benefit of using Docker in microservices architecture?",
-			[]string{"a) It makes the application run faster", "b) It provides a consistent environment across development and production", "c) It automatically scales the application", "d) It writes code for you"},
+			"In MongoDB, what is the equivalent of an SQL table?",
+			[]string{"a) Document", "b) Collection", "c) Database", "d) Field"},
+			"b",
+		},
+
+		// SQL vs NoSQL
+		{
+			"In the library analogy, what do 'books stored on shelves with a specific structure' represent?",
+			[]string{"a) NoSQL databases", "b) SQL databases", "c) In-memory caches", "d) File systems"},
 			"b",
 		},
 		{
-			"In a Dockerfile, what does the `EXPOSE` instruction do?",
-			[]string{"a) Opens a port on the host machine", "b) Installs network tools", "c) Informs Docker that the container listens on the specified port", "d) Creates a new network interface"},
+			"Which of the following is a characteristic of NoSQL databases?",
+			[]string{"a) Strict schema", "b) ACID transactions", "c) Flexible schema", "d) SQL query language"},
 			"c",
 		},
-
-		// Kubernetes for Orchestration
 		{
-			"In the logistics company analogy for Kubernetes, what do the 'shipping boxes' represent?",
-			[]string{"a) Pods", "b) Nodes", "c) Services", "d) Containers"},
+			"What does BSON stand for in the context of MongoDB?",
+			[]string{"a) Basic SQL Object Notation", "b) Binary JSON", "c) Boolean Serialized Object Notation", "d) Baselined Serialized Object Notation"},
+			"b",
+		},
+
+		// Service Discovery
+		{
+			"In the food court analogy for service discovery, what does the 'central directory' represent?",
+			[]string{"a) The menu", "b) The service registry", "c) The kitchen", "d) The cash register"},
+			"b",
+		},
+		{
+			"Which of the following is NOT a key concept in service discovery?",
+			[]string{"a) Registration", "b) Discovery", "c) Health Checking", "d) Load Balancing"},
 			"d",
 		},
 		{
-			"What is a key feature of Kubernetes in managing microservices?",
-			[]string{"a) It writes your application code", "b) It provides automatic scaling and self-healing", "c) It replaces the need for databases", "d) It makes your application faster"},
+			"What is the primary purpose of Consul in a microservices architecture?",
+			[]string{"a) Database management", "b) Service discovery and health checking", "c) Code deployment", "d) User authentication"},
 			"b",
 		},
+
+		// Configuration Management
 		{
-			"In a Kubernetes deployment YAML, what does `replicas: 3` specify?",
-			[]string{"a) The number of nodes in the cluster", "b) The number of containers to run", "c) The number of databases to create", "d) The number of networks to set up"},
-			"b",
+			"In the recipe book analogy for configuration management, what do the 'recipes' represent?",
+			[]string{"a) Services", "b) Databases", "c) Configurations", "d) APIs"},
+			"c",
+		},
+		{
+			"Which of the following is a feature of the Viper configuration management library?",
+			[]string{"a) Automatic code generation", "b) Database migrations", "c) Reading from multiple configuration formats", "d) Load balancing"},
+			"c",
+		},
+		{
+			"What is a best practice for handling sensitive information in configuration management?",
+			[]string{"a) Hardcoding in the application", "b) Storing in version control", "c) Using environment variables", "d) Sharing through public APIs"},
+			"c",
 		},
 	}
 
