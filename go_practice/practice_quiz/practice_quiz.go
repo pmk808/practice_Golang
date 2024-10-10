@@ -5,77 +5,121 @@ import (
 )
 
 func Run() {
-	// Questions and answers
+	// Questions and answers for Service Discovery, Configuration Management, Logging, Monitoring, and Testing
 	questions := []struct {
 		question string
 		options  []string
 		answer   string
 	}{
-		// Database Integration
+		// Service Discovery - Theory
 		{
-			"In the library analogy for database integration, what does the 'librarian' represent?",
-			[]string{"a) The database", "b) The user", "c) The microservice", "d) The data"},
-			"c",
-		},
-		{
-			"Which package in Go provides a consistent interface for SQL databases?",
-			[]string{"a) sql.DB", "b) database/sql", "c) sqlx", "d) gorm"},
+			"Which of the following is a key feature of service discovery?",
+			[]string{"a) Caching", "b) Registration", "c) Version control", "d) Encryption"},
 			"b",
 		},
 		{
-			"In MongoDB, what is the equivalent of an SQL table?",
-			[]string{"a) Document", "b) Collection", "c) Database", "d) Field"},
-			"b",
-		},
-
-		// SQL vs NoSQL
-		{
-			"In the library analogy, what do 'books stored on shelves with a specific structure' represent?",
-			[]string{"a) NoSQL databases", "b) SQL databases", "c) In-memory caches", "d) File systems"},
-			"b",
+			"In service discovery, what is the purpose of health checking?",
+			[]string{"a) Ensure a service is functioning correctly", "b) Load balancing", "c) Caching data", "d) Configuring environment variables"},
+			"a",
 		},
 		{
-			"Which of the following is a characteristic of NoSQL databases?",
-			[]string{"a) Strict schema", "b) ACID transactions", "c) Flexible schema", "d) SQL query language"},
-			"c",
+			"What does Consul primarily provide in a microservices architecture?",
+			[]string{"a) Service discovery and health checking", "b) Authentication and authorization", "c) Database management", "d) Message queuing"},
+			"a",
 		},
 		{
-			"What does BSON stand for in the context of MongoDB?",
-			[]string{"a) Basic SQL Object Notation", "b) Binary JSON", "c) Boolean Serialized Object Notation", "d) Baselined Serialized Object Notation"},
-			"b",
-		},
-
-		// Service Discovery
-		{
-			"In the food court analogy for service discovery, what does the 'central directory' represent?",
-			[]string{"a) The menu", "b) The service registry", "c) The kitchen", "d) The cash register"},
-			"b",
-		},
-		{
-			"Which of the following is NOT a key concept in service discovery?",
-			[]string{"a) Registration", "b) Discovery", "c) Health Checking", "d) Load Balancing"},
+			"Which protocol is typically used by Consul for service discovery communication?",
+			[]string{"a) HTTP", "b) TCP", "c) gRPC", "d) DNS"},
 			"d",
 		},
 		{
-			"What is the primary purpose of Consul in a microservices architecture?",
-			[]string{"a) Database management", "b) Service discovery and health checking", "c) Code deployment", "d) User authentication"},
+			"What kind of data store is etcd?",
+			[]string{"a) Distributed key-value store", "b) Relational database", "c) NoSQL document store", "d) In-memory cache"},
+			"a",
+		},
+		{
+			"In the food court analogy for service discovery, what does the 'central directory' represent?",
+			[]string{"a) The menu", "b) The service registry", "c) The kitchen", "d) The customers"},
 			"b",
 		},
 
-		// Configuration Management
+		// Configuration Management - Theory
 		{
-			"In the recipe book analogy for configuration management, what do the 'recipes' represent?",
-			[]string{"a) Services", "b) Databases", "c) Configurations", "d) APIs"},
+			"Which Go library is commonly used for managing application configuration?",
+			[]string{"a) sqlx", "b) Viper", "c) Gin", "d) Echo"},
+			"b",
+		},
+		{
+			"In configuration management, what is the advantage of using environment variables?",
+			[]string{"a) Centralized configuration", "b) Encryption", "c) Avoiding hardcoding sensitive data", "d) Improving performance"},
 			"c",
 		},
 		{
-			"Which of the following is a feature of the Viper configuration management library?",
-			[]string{"a) Automatic code generation", "b) Database migrations", "c) Reading from multiple configuration formats", "d) Load balancing"},
+			"Which of the following formats can Viper read from?",
+			[]string{"a) JSON", "b) YAML", "c) Environment variables", "d) All of the above"},
+			"d",
+		},
+		{
+			"What is a best practice for handling configuration changes without restarting services?",
+			[]string{"a) Hardcoding values", "b) Using environment variables", "c) Utilizing Viper's dynamic configuration reloading", "d) Embedding configurations in binary"},
 			"c",
 		},
 		{
-			"What is a best practice for handling sensitive information in configuration management?",
-			[]string{"a) Hardcoding in the application", "b) Storing in version control", "c) Using environment variables", "d) Sharing through public APIs"},
+			"In the recipe book analogy for configuration management, what do 'recipes' represent?",
+			[]string{"a) Microservices", "b) Configurations", "c) Databases", "d) APIs"},
+			"b",
+		},
+
+		// Logging - Theory
+		{
+			"Why is structured logging preferred in microservices?",
+			[]string{"a) Easier to read", "b) Allows more precise searching and filtering", "c) Takes less space", "d) Faster execution"},
+			"b",
+		},
+		{
+			"What Go package is commonly used for structured logging?",
+			[]string{"a) log/slog", "b) fmt", "c) log", "d) Gin"},
+			"a",
+		},
+
+		// Monitoring - Theory
+		{
+			"What is Prometheus primarily used for in microservices?",
+			[]string{"a) Logging", "b) Metrics collection", "c) Distributed tracing", "d) Message queuing"},
+			"b",
+		},
+		{
+			"In Prometheus monitoring, what is a 'scrape'? ",
+			[]string{"a) A query to the database", "b) A method to trace errors", "c) Collecting metrics from a target", "d) A method to log HTTP requests"},
+			"c",
+		},
+
+		// Distributed Tracing - Theory
+		{
+			"Which tool is used for distributed tracing in microservices?",
+			[]string{"a) Prometheus", "b) Grafana", "c) Jaeger", "d) Kubernetes"},
+			"c",
+		},
+		{
+			"Distributed tracing helps in tracking which of the following?",
+			[]string{"a) User activity logs", "b) Request flows across services", "c) Metrics data", "d) Configuration changes"},
+			"b",
+		},
+
+		// Testing Strategies - Theory
+		{
+			"What is the purpose of unit testing in microservices?",
+			[]string{"a) To test individual services in isolation", "b) To test communication between services", "c) To test the entire system", "d) To test configuration changes"},
+			"a",
+		},
+		{
+			"Which Go package is commonly used for integration testing?",
+			[]string{"a) log/slog", "b) net/http/httptest", "c) os", "d) fmt"},
+			"b",
+		},
+		{
+			"What type of testing focuses on the entire microservices ecosystem?",
+			[]string{"a) Unit testing", "b) Integration testing", "c) End-to-end testing", "d) Stress testing"},
 			"c",
 		},
 	}
