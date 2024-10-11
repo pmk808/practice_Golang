@@ -5,121 +5,85 @@ import (
 )
 
 func Run() {
-	// Questions and answers for Service Discovery, Configuration Management, Logging, Monitoring, and Testing
 	questions := []struct {
 		question string
 		options  []string
 		answer   string
 	}{
-		// Service Discovery - Theory
+		// Security Considerations - Authentication and Authorization
 		{
-			"Which of the following is a key feature of service discovery?",
-			[]string{"a) Caching", "b) Registration", "c) Version control", "d) Encryption"},
+			"What does JWT stand for in the context of authentication?",
+			[]string{"a) Java Web Token", "b) JSON Web Token", "c) JavaScript Web Token", "d) Joint Web Technology"},
 			"b",
 		},
 		{
-			"In service discovery, what is the purpose of health checking?",
-			[]string{"a) Ensure a service is functioning correctly", "b) Load balancing", "c) Caching data", "d) Configuring environment variables"},
-			"a",
-		},
-		{
-			"What does Consul primarily provide in a microservices architecture?",
-			[]string{"a) Service discovery and health checking", "b) Authentication and authorization", "c) Database management", "d) Message queuing"},
-			"a",
-		},
-		{
-			"Which protocol is typically used by Consul for service discovery communication?",
-			[]string{"a) HTTP", "b) TCP", "c) gRPC", "d) DNS"},
-			"d",
-		},
-		{
-			"What kind of data store is etcd?",
-			[]string{"a) Distributed key-value store", "b) Relational database", "c) NoSQL document store", "d) In-memory cache"},
-			"a",
-		},
-		{
-			"In the food court analogy for service discovery, what does the 'central directory' represent?",
-			[]string{"a) The menu", "b) The service registry", "c) The kitchen", "d) The customers"},
-			"b",
-		},
-
-		// Configuration Management - Theory
-		{
-			"Which Go library is commonly used for managing application configuration?",
-			[]string{"a) sqlx", "b) Viper", "c) Gin", "d) Echo"},
-			"b",
-		},
-		{
-			"In configuration management, what is the advantage of using environment variables?",
-			[]string{"a) Centralized configuration", "b) Encryption", "c) Avoiding hardcoding sensitive data", "d) Improving performance"},
+			"In the backstage pass analogy for JWT, what does the token represent?",
+			[]string{"a) The security guard", "b) The concert venue", "c) The backstage pass", "d) The ticket office"},
 			"c",
 		},
 		{
-			"Which of the following formats can Viper read from?",
-			[]string{"a) JSON", "b) YAML", "c) Environment variables", "d) All of the above"},
-			"d",
-		},
-		{
-			"What is a best practice for handling configuration changes without restarting services?",
-			[]string{"a) Hardcoding values", "b) Using environment variables", "c) Utilizing Viper's dynamic configuration reloading", "d) Embedding configurations in binary"},
-			"c",
-		},
-		{
-			"In the recipe book analogy for configuration management, what do 'recipes' represent?",
-			[]string{"a) Microservices", "b) Configurations", "c) Databases", "d) APIs"},
+			"Which of the following is a key advantage of using JWT for authentication?",
+			[]string{"a) Encryption of all data", "b) Stateless authentication", "c) Automatic password reset", "d) Two-factor authentication"},
 			"b",
 		},
 
-		// Logging - Theory
+		// Security Considerations - HTTPS
 		{
-			"Why is structured logging preferred in microservices?",
-			[]string{"a) Easier to read", "b) Allows more precise searching and filtering", "c) Takes less space", "d) Faster execution"},
+			"In the analogy for HTTPS, what does the locked briefcase represent?",
+			[]string{"a) The server", "b) The encrypted message", "c) The recipient", "d) The internet"},
 			"b",
 		},
 		{
-			"What Go package is commonly used for structured logging?",
-			[]string{"a) log/slog", "b) fmt", "c) log", "d) Gin"},
-			"a",
-		},
-
-		// Monitoring - Theory
-		{
-			"What is Prometheus primarily used for in microservices?",
-			[]string{"a) Logging", "b) Metrics collection", "c) Distributed tracing", "d) Message queuing"},
-			"b",
-		},
-		{
-			"In Prometheus monitoring, what is a 'scrape'? ",
-			[]string{"a) A query to the database", "b) A method to trace errors", "c) Collecting metrics from a target", "d) A method to log HTTP requests"},
+			"What is the main purpose of using HTTPS in microservices communication?",
+			[]string{"a) Faster data transfer", "b) Reduced server load", "c) Encrypted data transmission", "d) Improved SEO"},
 			"c",
 		},
 
-		// Distributed Tracing - Theory
+		// Security Considerations - Input Validation and Sanitization
 		{
-			"Which tool is used for distributed tracing in microservices?",
-			[]string{"a) Prometheus", "b) Grafana", "c) Jaeger", "d) Kubernetes"},
-			"c",
+			"In the club bouncer analogy for input validation, what does the bouncer represent?",
+			[]string{"a) The database", "b) The validator", "c) The user", "d) The server"},
+			"b",
 		},
 		{
-			"Distributed tracing helps in tracking which of the following?",
-			[]string{"a) User activity logs", "b) Request flows across services", "c) Metrics data", "d) Configuration changes"},
+			"Which of the following is NOT a typical goal of input sanitization?",
+			[]string{"a) Prevent XSS attacks", "b) Ensure data consistency", "c) Encrypt all input data", "d) Remove potentially harmful characters"},
+			"c",
+		},
+
+		// Deployment and CI/CD - CI/CD Pipeline
+		{
+			"In the car factory analogy for CI/CD, what do the quality check stations represent?",
+			[]string{"a) Code reviews", "b) Pipeline stages", "c) Deployment servers", "d) End users"},
+			"b",
+		},
+		{
+			"What is the primary purpose of a CI/CD pipeline in microservices development?",
+			[]string{"a) To increase development time", "b) To automate testing and deployment processes", "c) To replace manual coding", "d) To reduce the number of features"},
 			"b",
 		},
 
-		// Testing Strategies - Theory
+		// Deployment and CI/CD - Blue-Green Deployment
 		{
-			"What is the purpose of unit testing in microservices?",
-			[]string{"a) To test individual services in isolation", "b) To test communication between services", "c) To test the entire system", "d) To test configuration changes"},
-			"a",
-		},
-		{
-			"Which Go package is commonly used for integration testing?",
-			[]string{"a) log/slog", "b) net/http/httptest", "c) os", "d) fmt"},
+			"In the highway analogy for Blue-Green deployment, what does switching traffic represent?",
+			[]string{"a) Load balancing", "b) Redirecting user requests to the new version", "c) Shutting down old servers", "d) Testing in production"},
 			"b",
 		},
 		{
-			"What type of testing focuses on the entire microservices ecosystem?",
-			[]string{"a) Unit testing", "b) Integration testing", "c) End-to-end testing", "d) Stress testing"},
+			"What is a key advantage of Blue-Green deployment?",
+			[]string{"a) Reduced development time", "b) Improved security", "c) Zero-downtime updates", "d) Automatic bug fixing"},
+			"c",
+		},
+
+		// Deployment and CI/CD - Canary Deployment
+		{
+			"In the coal mine analogy for Canary deployment, what does the canary represent?",
+			[]string{"a) The production environment", "b) The new version of the software", "c) The end users", "d) The old version of the software"},
+			"b",
+		},
+		{
+			"What is the main benefit of using Canary deployment?",
+			[]string{"a) Faster development", "b) Reduced server costs", "c) Gradual rollout with reduced risk", "d) Automatic error correction"},
 			"c",
 		},
 	}
